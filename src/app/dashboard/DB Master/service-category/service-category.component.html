@@ -1,0 +1,38 @@
+<h2 mat-dialog-title class="mat-dialog-title" style="color: rgb(2, 36, 36);">Service Category</h2>
+<div mat-dialog-content>
+
+  <div class="container">
+    <table mat-table class="table table-bordered table-sm" [dataSource]="dataSource" matSort>
+      <ng-container matColumnDef="sno">
+        <th mat-header-cell *matHeaderCellDef>S.NO</th>
+        <td mat-cell *matCellDef="let element">{{ element.sno }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="serviceCategory">
+        <th mat-header-cell *matHeaderCellDef>Service Category</th>
+        <td mat-cell *matCellDef="let element">{{ element.serviceCategory }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef>Description</th>
+        <td mat-cell *matCellDef="let element">{{ element.description }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-button type="button">edit</button>
+          <button mat-button type="button">Display</button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <br>
+
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button type="button" class="btn btn-info">Save</button>
+</div>

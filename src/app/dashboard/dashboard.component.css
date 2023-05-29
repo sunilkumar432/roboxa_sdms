@@ -1,0 +1,40 @@
+.sidenav {
+    width: 230px;
+    background-color: #fefcfc;
+    color: #ffffff;
+    overflow-y: auto;
+  }
+
+  /* .toolbar {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+  } */
+  .sidenav-container {
+    
+    height: 100vh;
+  }
+  h1 {
+    color: rgb(74, 74, 74);
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: 900;
+  }
+  
+  h1:hover {
+    color: rgb(6, 6, 6);
+  }
+  
+  h6 {
+    color: rgb(110, 110, 110);
+    font-size: 13px;
+    cursor: pointer;
+  }
+  
+  h6:hover {
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+  }

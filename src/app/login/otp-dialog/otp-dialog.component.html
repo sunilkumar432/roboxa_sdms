@@ -1,0 +1,9 @@
+<h2 mat-dialog-title>Enter OTP</h2>
+<mat-dialog-content>
+    <mat-form-field *ngFor="let digit of digits">
+        <input matInput type="text" maxlength="1" [(ngModel)]="digits">
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button (click)="onSubmit()">Submit</button>
+</mat-dialog-actions>

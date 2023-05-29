@@ -1,0 +1,50 @@
+<h2 mat-dialog-title>Create New Item</h2>
+<div mat-dialog-content>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="column" fxFlex="33%">
+        <mat-form-field>
+          <input matInput formControlName="sitecode" placeholder="sitecode" required>
+          <mat-error *ngIf="form.controls['sitecode'].hasError('required')">site code is required</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="column" fxFlex="33%">
+        <mat-form-field>
+          <input matInput formControlName="sitename" placeholder="Site Name " required>
+          <mat-error *ngIf="form.controls['sitename'].hasError('required')">Site Name  is required</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="column" fxFlex="33%">
+        <mat-form-field>
+          <input matInput formControlName="legalsitename" placeholder="Legal sitename 3" required>
+          <mat-error *ngIf="form.controls['legalsitename'].hasError('required')">Legal sitename is required</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column" fxFlex="33%">
+        <mat-form-field>
+          <input matInput formControlName="institutionname" placeholder="Institution Name " required>
+          <mat-error *ngIf="form.controls['institutionname'].hasError('required')">InstitutionName  is required</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="column" fxFlex="33%">
+        <mat-form-field>
+          <input matInput formControlName="contactperson" placeholder="Contact Person " required>
+          <mat-error *ngIf="form.controls['contactperson'].hasError('required')">Contact Person  is required</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="column" fxFlex="33%">
+        <mat-form-field>
+          <input matInput formControlName="referencedby" placeholder="Referenced By 6" required>
+          <mat-error *ngIf="form.controls['referencedby'].hasError('required')">Referenced By 6 is required</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onClose()">Cancel</button>
+  <button mat-button color="primary" [disabled]="form.invalid">Save</button>
+</div>

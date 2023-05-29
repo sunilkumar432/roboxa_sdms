@@ -1,0 +1,38 @@
+/* site-add-edit.component.css */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .row > div {
+    flex: 1;
+    padding: 0 10px;
+  }
+  
+  .row .full-width {
+    flex-basis: 100%;
+  }
+  
+  button {
+    margin-right: 10px;
+  }
+  
+  @media (max-width: 600px) {
+    .row {
+      flex-direction: column;
+    }
+  }
+  mat-dialog-content{
+    margin-left: 100px;
+  }
+  

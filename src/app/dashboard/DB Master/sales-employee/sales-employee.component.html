@@ -1,0 +1,67 @@
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource">
+  
+      <!-- Position Column -->
+      <ng-container matColumnDef="position">
+        <th mat-header-cell *matHeaderCellDef>Id</th>
+        <td mat-cell *matCellDef="let user"> {{user.position}} </td>
+      </ng-container>
+  
+      <!-- empcode Column -->
+      <ng-container matColumnDef="empcode">
+        <th mat-header-cell *matHeaderCellDef>Emp Code</th>
+        <td mat-cell *matCellDef="let user"> {{user.empcode}} </td>
+      </ng-container>
+        <!-- cityname Column -->
+        <ng-container matColumnDef="employeename">
+            <th mat-header-cell *matHeaderCellDef>Employee Name</th>
+            <td mat-cell *matCellDef="let user"> {{user.employeename}} </td>
+          </ng-container>
+      
+      <!-- role Column -->
+      <ng-container matColumnDef="role">
+        <th mat-header-cell *matHeaderCellDef>Role</th>
+        <td mat-cell *matCellDef="let user"> {{user.role}} </td>
+      </ng-container>
+  
+      <!-- startdate Column -->
+      <ng-container matColumnDef="startdate">
+        <th mat-header-cell *matHeaderCellDef>Start Date</th>
+        <td mat-cell *matCellDef="let user"> {{ user.startdate | date: 'yyyy-MM-dd' }} </td>
+      </ng-container>
+      
+      <!-- enddate Column -->
+      <ng-container matColumnDef="enddate">
+        <th mat-header-cell *matHeaderCellDef>End Date</th>
+        <td mat-cell *matCellDef="let user"> {{ user.enddate | date: 'yyyy-MM-dd' }} </td>
+      </ng-container>
+      
+      
+      <!-- column3 Column -->
+      <ng-container matColumnDef="column3">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <td mat-cell *matCellDef="let item">
+          <!-- Action buttons -->
+          <button mat-mini-fab color="basic"aria-label="Example icon button with a menu icon">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-mini-fab color="primary"aria-label="Example icon button with a menu icon">
+            <mat-icon>visibility</mat-icon>
+          </button>
+          <button mat-mini-fab color="warn"aria-label="Example icon button with a menu icon">
+            <mat-icon>delete</mat-icon>
+          </button>
+       
+        </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                   showFirstLastButtons
+                   aria-label="Select page of periodic users">
+    </mat-paginator>
+  </div>
+  

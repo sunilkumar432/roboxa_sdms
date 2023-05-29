@@ -1,0 +1,46 @@
+mat-card {
+    max-width: 350px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.374); /* Adjust the transparency by changing the alpha value */
+    padding: 16px;
+  
+  }
+
+  
+  mat-card-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    margin-left: 40px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+  .container {
+    background-image: url('src/assets/images/img1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Set the minimum height to cover the full viewport height */
+    display: flex; /* Use flexbox to align content vertically */
+    align-items: center; /* Vertically center the content */
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    width: 100%;
+  }
+  

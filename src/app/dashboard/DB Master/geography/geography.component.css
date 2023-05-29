@@ -1,0 +1,26 @@
+.mat-elevation-z8 {
+    overflow-x: auto;
+    margin-top: 40px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  
+  .responsive-table {
+    width: 100%;
+    margin-top: 30px;
+    
+  }
+  
+  .mat-row,
+  .mat-header-row {
+    display: flex;
+  }
+  
+  .mat-cell,
+  .mat-header-cell {
+    flex: 1;
+    overflow: hidden;
+    word-wrap: break-word;
+    white-space: normal;
+  }
+  

@@ -1,0 +1,137 @@
+
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav mode="side" opened class="sidenav">
+        <!-- Side Navigation Content -->
+        <div class="sidenav-content">
+            <h1>SDMS</h1>
+            <mat-accordion>
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>DB Master</mat-panel-title>
+
+                    </mat-expansion-panel-header>
+
+                    <!-- Content of Dropdown Component 1 -->
+                    <h6 routerLink="geography">Geography</h6>
+                    <h6 routerLink="sales-employee">Sales Employee</h6>
+                    <h6 routerLink="service-category">ServiceCategory</h6>
+                    <h6 routerLink="document-category">Document Category </h6>
+                    <h6 routerLink="specialities">Specialities</h6>
+                    <h6 routerLink="population-grp">Population Grp</h6>
+                    <h6 routerLink="site-services">Site Services</h6>
+                    <h6 routerLink="site-certifications">Site Certifications</h6>
+                    <h6 routerLink="equipment-type">Equipment Type</h6>
+                    <h6 routerLink="study-phases">Study Phases</h6>
+                    <h6 routerLink="service-category">Study Types</h6>
+                    <h6 routerLink="research-products">Research Products</h6>
+                    <h6 routerLink="cr-roles">CR Roles</h6>
+                    <h6 routerLink="cr-license-type">CR License Type</h6>
+                    <h6 routerLink="cr-status">CR Status</h6>
+
+                </mat-expansion-panel>
+
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Master Data
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <!-- Content of Dropdown Component 2 -->
+                    <h6 routerLink="sites">Sites</h6>
+                    <h6 routerLink="instituations">Institutions</h6>
+                    <h6 routerLink="services">Services</h6>
+                    <h6 routerLink="icd">ICD</h6>
+                    <h6 routerLink="documents">Documents</h6>
+                    <h6 routerLink="equipment">Equipment</h6>
+                </mat-expansion-panel>
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Site Recognition
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+
+                    <h6 routerLink="general">General</h6>
+                    <h6 routerLink="populationgroup">Population Group</h6>
+                    <h6 routerLink="icddata">ICD Data</h6>
+                    <h6 routerLink="hospitalinfraservices">Hospital Infra&Services</h6>
+                    <h6 routerLink="clinicalresearchersinfra-capabilities">Clinical Researcher Infra & Capabilities</h6>
+                    <h6 routerLink="itsystems-infra">IT & Systems Infra</h6>
+                    <h6 routerLink="human-resources">Human Resources</h6>
+                    <h6 routerLink="researchers">Clinical Researchers</h6>
+                    <h6 routerLink="regularoty-information">Regularoty Information</h6>
+                    <h6 routerLink="log-details">Log Details</h6>
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Site Equipment
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+
+                    <h6 routerLink="site-equipment-details">Site Equipment Details</h6>
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Upload Documents
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <h6 routerLink="site-recognition">Site Recognition</h6>
+                    <h6 routerLink="site-assessment">Site Assessment</h6>
+                    <h6 routerLink="clinical-researcher">Clinical Researcher</h6>
+
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Site Assessment
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <h6 routerLink="general">General</h6>
+                    <h6 routerLink="registration-services">Registration,Services</h6>
+                    <h6 routerLink="organization-personnel">Orgnization,Personeel</h6>
+
+                    <h6 routerLink="quality-systems">Quality Systems</h6>
+                    <h6 routerLink="infrastructure-equipment">Infrastructure & Equipment</h6>
+                    <h6 routerLink="general-legaldocumentation">General,Legal Documentation</h6>
+                    <h6 routerLink="review-details">Review Details</h6>
+                    <h6 routerLink="log-details">Log Details</h6>
+
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Clinical Researcher
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <h6 routerLink="clinnical-researcher/general">General</h6>
+                    <h6 routerLink="clinical-researcher/experience-license-details">Experience,License Details</h6>
+                    <h6 routerLink="clinical-researcher/log-details">Log Details</h6>
+
+                </mat-expansion-panel>
+
+
+
+                <!-- Add more mat-expansion-panel for other components -->
+            </mat-accordion>
+
+        </div>
+
+    </mat-sidenav>
+    <mat-toolbar  class="toolbar" color="primary">
+        <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </mat-toolbar>
+
+    <div class="main-content">
+        <!-- Main content here -->
+        <router-outlet></router-outlet>
+      </div>
+    
+
+</mat-sidenav-container>
